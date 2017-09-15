@@ -15,7 +15,7 @@ Provided shell commands should work for Debian and its derivatives.
 
     ```Shell
     sudo -u <redmine_user> sh
-    cd `<redmine>/public/themes`
+    cd <redmine>/public/themes
     git clone https://github.com/volgau/redmine-theme-greenmine
     mv redmine-theme-greenmine greenmine
     ```
