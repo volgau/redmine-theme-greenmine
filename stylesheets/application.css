@@ -49,6 +49,23 @@ input.autocomplete {
     border-color: #9EC2B1 !important;
 }
 
+#sidebar a.selected {
+    background-color: #9DD5B9;
+}
+
+tr.group span.count {
+    background: #9DD5B9;
+}
+
+.drdn-items > a:hover {
+    background-color: #75CF9F;
+}
+
+#context-menu li:hover {
+    border: 1px solid #62b68d;
+    background-color: #eefdf5;
+}
+
 /* Try to fix project card overflow to the next column */
 #projects-index ul.projects li.root {
     display: inline-block;
