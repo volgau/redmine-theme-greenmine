@@ -48,3 +48,8 @@ a, a:link, a:visited {
 input.autocomplete {
     border-color: #9EC2B1 !important;
 }
+
+/* Try to fix project card overflow to the next column */
+#projects-index ul.projects li.root {
+    display: inline-block;
+}
