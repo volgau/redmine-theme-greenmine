@@ -1,0 +1,50 @@
+@import url("../../../stylesheets/application.css");
+
+#top-menu {
+    background-color: #3E765B;
+    padding: 6px 2px 2px 10px;
+}
+
+#top-menu a {
+    margin-right: 12px;
+}
+
+#header {
+    background-color: #62B68D;
+}
+
+a, a:link, a:visited {
+    color: #196;
+}
+
+#main-menu > ul > li > a {
+    border-top-right-radius: 8px;
+}
+
+#main-menu > ul > li > a:hover {
+    background-color: #75CF9F;
+}
+
+#main-menu > ul > li > a.selected {
+    border-top: 3px solid #196;
+}
+
+#main-menu ul li a.new-object {
+    background-color: #196;
+    border-top: 3px solid #fff;
+}
+
+#main-menu .menu-children {
+    border-right-color: #75CF9F;
+    border-bottom-color: #75CF9F;
+    border-left-color: #75CF9F;
+}
+
+#main-menu .menu-children li a:hover {
+    color: #fff;
+    background-color: #75CF9F;
+}
+
+input.autocomplete {
+    border-color: #9EC2B1 !important;
+}
