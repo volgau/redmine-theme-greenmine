@@ -61,9 +61,17 @@ tr.group span.count {
     background-color: #75CF9F;
 }
 
+#context-menu a:hover {
+    color: #2A8556;
+}
+
 #context-menu li:hover {
-    border: 1px solid #62b68d;
-    background-color: #eefdf5;
+    border: 1px solid #62b68d !important;
+    background-color: #eefdf5 !important;
+}
+
+.context-menu-selection {
+    background-color: #50AA7A!important;
 }
 
 /* Try to fix project card overflow to the next column */
