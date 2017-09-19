@@ -17,10 +17,6 @@ a, a:link, a:visited {
     color: #196;
 }
 
-#main-menu > ul > li > a {
-    border-top-right-radius: 8px;
-}
-
 #main-menu > ul > li > a:hover {
     background-color: #75CF9F;
 }
