@@ -50,11 +50,11 @@ input.autocomplete {
 }
 
 #sidebar a.selected {
-    background-color: #9DD5B9;
+    background-color: #62B68D;
 }
 
 tr.group span.count {
-    background: #9DD5B9;
+    background: #3E765B;
 }
 
 .drdn-items > a:hover {
