@@ -16,7 +16,7 @@ SidebarToggler.prototype.getString = function (slug) {
 }
 
 SidebarToggler.prototype.addButton = function () {
-    if ($("#sidebar").length > 0) {
+    if ($("#sidebar").length > 0 && $("#sidebar-toggle-button").length === 0) {
         // TODO: Add CSS class
         $("#header").prepend ("<a id='sidebar-toggle-button' class='sidebar-toggle-button' href='#'>&raquo;</a>");
         $("#header").children ("#sidebar-toggle-button")
