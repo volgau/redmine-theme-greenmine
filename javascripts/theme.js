@@ -18,8 +18,8 @@ SidebarToggler.prototype.getString = function (slug) {
 SidebarToggler.prototype.addButton = function () {
     if ($("#sidebar").length > 0) {
         // TODO: Add CSS class
-        $("#header").prepend ("<a id='btn-sidebar-toggle' class='btn-sidebar-toggle' href='#'>&raquo;</a>");
-        $("#header").children ("#btn-sidebar-toggle")
+        $("#header").prepend ("<a id='sidebar-toggle-button' class='sidebar-toggle-button' href='#'>&raquo;</a>");
+        $("#header").children ("#sidebar-toggle-button")
             .attr ("title", this.getString ("buttonTitle"))
             .click ((function (e) { 
                 e.preventDefault();
@@ -38,14 +38,14 @@ SidebarToggler.prototype.toggle = function () {
 };
 
 SidebarToggler.prototype.hide = function () {
-    $("#btn-sidebar-toggle").addClass ("closed").html("&laquo;");
+    $("#sidebar-toggle-button").addClass ("closed").html("&laquo;");
     // TODO: Preserve original content width
     $("#content").width ("auto");
     $("#sidebar").hide ();
 };
 
 SidebarToggler.prototype.show = function () {
-    $("#btn-sidebar-toggle").removeClass ("closed").html("&raquo;");
+    $("#sidebar-toggle-button").removeClass ("closed").html("&raquo;");
     // TODO: Preserve original content width
     $("#content").width ("75%");
     $("#sidebar").show ();
