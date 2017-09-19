@@ -12,3 +12,7 @@
 .context-menu-selection {
     background-color: #50AA7A!important;
 }
+
+.context-menu-selection:hover {
+    background-color: #50AA7A !important;
+}
