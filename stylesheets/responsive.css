@@ -16,5 +16,5 @@
     }
 
     /* Sidebar toggler styles */    
-    #header .btn-sidebar-toogle { display: hidden; }
+    #header .sidebar-toggle-button { display: none; }
 }
