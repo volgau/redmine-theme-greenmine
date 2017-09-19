@@ -67,20 +67,22 @@ tr.group span.count {
     display:block;
     position:absolute;
     bottom:0;
-    right:0;
+    right:6px;
     z-index:99;
     padding:5px 10px;
     color:#333;
     background-color:#EEEEEE;
-    border:1px solid #3E765B;
+    border-top-width:3px;
+    border-top-style:solid;
+    border-top-color:#3E765B;
     border-bottom:none;
     border-right:none;
-    border-top-left-radius: 8px;
     font-weight: bold;
 }
 
 #header .sidebar-toggle-button.closed {
     color:#FFF;
+    border-top-color:#FFF;
     background-color:#3E765B;
 }
 
