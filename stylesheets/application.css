@@ -72,7 +72,9 @@ tr.group span.count {
     padding:5px 10px;
     color:#333;
     background-color:#EEEEEE;
-    border-left:1px solid #3E765B;
+    border:1px solid #3E765B;
+    border-bottom:none;
+    border-right:none;
     border-top-left-radius: 8px;
     font-weight: bold;
 }
