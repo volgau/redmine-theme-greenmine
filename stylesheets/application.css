@@ -83,3 +83,13 @@ tr.group span.count {
     color:#FFF;
     background-color:#3E765B;
 }
+
+/* Issue grid styles by priority */
+tr.priority-highest td.priority { color: #F00; font-weight:bold; }
+tr.priority-highest { border-bottom: 4px solid #F00; }
+tr.priority-high2 td.priority { color: #F00; }
+tr.priority-high2 { border-bottom: 2px solid #F00; }
+tr.priority-high3 td.priority { color: #FF5300; }   
+tr.priority-high3 { border-bottom: 1px solid #FF5300; }
+tr.priority-lowest td.priority { color: #8093F1;}
+tr.priority-lowest { border-bottom: 0.5px solid #8093F1; }
