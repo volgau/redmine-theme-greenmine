@@ -14,4 +14,7 @@
         border-bottom-color: #50836a;
         background-color: #62b68d;
     }
+
+    /* Sidebar toggler styles */    
+    #header .btn-sidebar-toogle { display: hidden; }
 }

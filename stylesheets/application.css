@@ -61,3 +61,23 @@ tr.group span.count {
 #projects-index ul.projects li.root {
     display: inline-block;
 }
+
+/* Sidebar toggler styles */
+#header .btn-sidebar-toogle {
+    display:block;
+    position:absolute;
+    bottom:0;
+    right:0;
+    z-index:99;
+    padding:5px 10px;
+    color:#333;
+    background-color:#EEEEEE;
+    border-left:1px solid #3E765B;
+    border-top-left-radius: 8px;
+    font-weight: bold;
+}
+
+#header .btn-sidebar-toogle.closed {
+    color:#FFF;
+    background-color:#3E765B;
+}
