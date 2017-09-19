@@ -57,8 +57,10 @@ SidebarToggler.prototype.restoreButtonState = function () {
     
 (function ($, document) {
     $(document).ready (function () {
-        var sidebarToggler = new SidebarToggler ();
-        sidebarToggler.addButton ();
-        sidebarToggler.restoreButtonState ();
+        setTimeout (function () {
+            var sidebarToggler = new SidebarToggler ();
+            sidebarToggler.addButton ();
+            sidebarToggler.restoreButtonState ();
+        }, 1000);
     });
 }) (jQuery, document);
