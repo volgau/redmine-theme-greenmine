@@ -1,0 +1,23 @@
+{
+  "name": "redmine-theme-greenmine",
+  "version": "0.1.0",
+  "description": "Green variation of the default Redmine theme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volgau/redmine-theme-greenmine.git"
+  },
+  "keywords": [
+    "redmine",
+    "theme",
+    "green"
+  ],
+  "author": "Roman M. Yagodin",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/volgau/redmine-theme-greenmine/issues"
+  },
+  "homepage": "https://github.com/volgau/redmine-theme-greenmine#readme",
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  }
+}
