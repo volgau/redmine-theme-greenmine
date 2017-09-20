@@ -1,6 +1,8 @@
 var Cookies = require("js-cookie");
 
-function SidebarToggler () {
+function SidebarToggler (cookieName, cookieExpires) {
+    this.cookieName = cookieName;
+    this.cookieExpires = cookieExpires;
 }
 
 SidebarToggler.prototype.strings = {
@@ -52,17 +54,17 @@ SidebarToggler.prototype.toggle = function () {
 SidebarToggler.prototype.hide = function () {
     $("#main").addClass ("nosidebar");
     $("#sidebar-toggle-button").addClass ("closed").html("&laquo;");
-    Cookies.set ("greenmine_sidebar_state", "closed", {expires: 7});
+    Cookies.set (this.cookieName, "closed", {expires: this.cookieExpires});
 };
 
 SidebarToggler.prototype.show = function () {
     $("#main").removeClass ("nosidebar");
     $("#sidebar-toggle-button").removeClass ("closed").html("&raquo;");
-    Cookies.set ("greenmine_sidebar_state", "open", {expires: 7});
+    Cookies.set (this.cookieName, "open", {expires: this.cookieExpires});
 };
 
 SidebarToggler.prototype.getStoredState = function () {
-    return Cookies.get ("greenmine_sidebar_state");
+    return Cookies.get (this.cookieName);
 };
 
 SidebarToggler.prototype.restoreState = function () {
