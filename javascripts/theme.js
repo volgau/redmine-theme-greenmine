@@ -126,6 +126,7 @@ SidebarToggler.prototype.hide = function () {
     // TODO: Preserve original content width
     $("#content").width ("auto");
     $("#sidebar").hide ();
+    Cookies.set ("sidebar-state", "closed", {expires: 7});
 };
 
 SidebarToggler.prototype.show = function () {
@@ -133,6 +134,7 @@ SidebarToggler.prototype.show = function () {
     // TODO: Preserve original content width
     $("#content").width ("75%");
     $("#sidebar").show ();
+    Cookies.set ("sidebar-state", "open", {expires: 7});
 };
 
 SidebarToggler.prototype.getStoredState = function () {
@@ -141,12 +143,10 @@ SidebarToggler.prototype.getStoredState = function () {
 
 SidebarToggler.prototype.restoreState = function () {
     var state = this.getStoredState ();
-    if (state === "undefined" || state === "open") {
+    if (typeof (state) === "undefined" || state === "open") {
         this.show ();
-        Cookies.set ("sidebar-toggle-state", "open", {expires: 7});
-    } else {
+    } else if (state === "closed") {
         this.hide ();
-        Cookies.set ("sidebar-toggle-state", "closed", {expires: 7});
     }
 };
 
