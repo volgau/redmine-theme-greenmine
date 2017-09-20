@@ -72,8 +72,9 @@ var SidebarToggler = __webpack_require__ (1).SidebarToggler;
 (function ($, document) {
     $(document).ready (function () {
         var sidebarToggler = new SidebarToggler ();
-        sidebarToggler.addButton ();
-        sidebarToggler.restoreState ();
+        if (sidebarToggler.addButton ()) {
+            sidebarToggler.restoreState ();
+        }
     });
 }) (jQuery, document);
 
@@ -102,43 +103,46 @@ SidebarToggler.prototype.getString = function (slug) {
 }
 
 SidebarToggler.prototype.addButton = function () {
-    if ($("#sidebar").length > 0 && $("#sidebar-toggle-button").length === 0) {
-        $("#header").prepend ("<a id='sidebar-toggle-button' class='sidebar-toggle-button' href='#'>&raquo;</a>");
+    if ($("#sidebar").length > 0 // sidebar present
+        && $("#sidebar").children().length !== 0 // sidebar is not empty
+        && $("#sidebar-toggle-button").length === 0) // button not yet added
+    {
+        $("#header").prepend ("<a id='sidebar-toggle-button' class='sidebar-toggle-button' href='#'></a>");
         $("#header").children ("#sidebar-toggle-button")
             .attr ("title", this.getString ("buttonTitle"))
             .click ((function (e) { 
                 e.preventDefault();
                 this.toggle ();
             }).bind (this)); // TODO: Use polyfill for bind()?
+
+            return true;
     }
+
+    return false;
 };
 
 SidebarToggler.prototype.toggle = function () {
-    if ($("#sidebar").filter (":visible").length === 1) {
-        this.hide ();
-    } else {
+    if ($("#main").hasClass ("nosidebar")) {
         this.show ();
+    } else {
+        this.hide ();
     }
 };
 
 SidebarToggler.prototype.hide = function () {
+    $("#main").addClass ("nosidebar");
     $("#sidebar-toggle-button").addClass ("closed").html("&laquo;");
-    // TODO: Preserve original content width
-    $("#content").width ("auto");
-    $("#sidebar").hide ();
-    Cookies.set ("sidebar-state", "closed", {expires: 7});
+    Cookies.set ("greenmine_sidebar_state", "closed", {expires: 7});
 };
 
 SidebarToggler.prototype.show = function () {
+    $("#main").removeClass ("nosidebar");
     $("#sidebar-toggle-button").removeClass ("closed").html("&raquo;");
-    // TODO: Preserve original content width
-    $("#content").width ("75%");
-    $("#sidebar").show ();
-    Cookies.set ("sidebar-state", "open", {expires: 7});
+    Cookies.set ("greenmine_sidebar_state", "open", {expires: 7});
 };
 
 SidebarToggler.prototype.getStoredState = function () {
-    return Cookies.get ("sidebar-state");
+    return Cookies.get ("greenmine_sidebar_state");
 };
 
 SidebarToggler.prototype.restoreState = function () {
