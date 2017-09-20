@@ -1,4 +1,4 @@
-require ("js-cookie");
+var Cookies = require("js-cookie");
 
 function SidebarToggler () {
 }
@@ -65,3 +65,5 @@ SidebarToggler.prototype.restoreState = function () {
         Cookies.set ("sidebar-toggle-state", "closed", {expires: 7});
     }
 };
+
+exports.SidebarToggler = SidebarToggler;

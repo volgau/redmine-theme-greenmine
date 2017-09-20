@@ -1,4 +1,4 @@
-require ("./sidebarToggler.js");
+var SidebarToggler = require ("./sidebarToggler.js").SidebarToggler;
 
 (function ($, document) {
     $(document).ready (function () {

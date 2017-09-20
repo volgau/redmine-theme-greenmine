@@ -67,7 +67,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__ (1);
+var SidebarToggler = __webpack_require__ (1).SidebarToggler;
 
 (function ($, document) {
     $(document).ready (function () {
@@ -82,7 +82,7 @@ __webpack_require__ (1);
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__ (2);
+var Cookies = __webpack_require__(2);
 
 function SidebarToggler () {
 }
@@ -149,6 +149,8 @@ SidebarToggler.prototype.restoreState = function () {
         Cookies.set ("sidebar-toggle-state", "closed", {expires: 7});
     }
 };
+
+exports.SidebarToggler = SidebarToggler;
 
 /***/ }),
 /* 2 */
