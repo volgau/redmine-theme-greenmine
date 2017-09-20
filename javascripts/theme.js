@@ -72,9 +72,7 @@ var SidebarToggler = __webpack_require__ (1).SidebarToggler;
 (function ($, document) {
     $(document).ready (function () {
         var sidebarToggler = new SidebarToggler ();
-        if (sidebarToggler.addButton ()) {
-            sidebarToggler.restoreState ();
-        }
+        sidebarToggler.init ();
     });
 }) (jQuery, document);
 
@@ -102,23 +100,28 @@ SidebarToggler.prototype.getString = function (slug) {
     return this.strings ["en"][slug];
 }
 
-SidebarToggler.prototype.addButton = function () {
-    if ($("#sidebar").length > 0 // sidebar present
-        && $("#sidebar").children().length !== 0 // sidebar is not empty
-        && $("#sidebar-toggle-button").length === 0) // button not yet added
-    {
-        $("#header").prepend ("<a id='sidebar-toggle-button' class='sidebar-toggle-button' href='#'></a>");
-        $("#header").children ("#sidebar-toggle-button")
-            .attr ("title", this.getString ("buttonTitle"))
-            .click ((function (e) { 
-                e.preventDefault();
-                this.toggle ();
-            }).bind (this)); // TODO: Use polyfill for bind()?
-
-            return true;
+SidebarToggler.prototype.init = function () {
+    if (this.pageHasSidebar ()) {
+        this.addButton ();
+        this.restoreState ();
     }
+};
 
-    return false;
+SidebarToggler.prototype.pageHasSidebar = function () {
+    // sidebar is present and not empty
+    return $("#sidebar").length > 0 && $("#sidebar").children().length !== 0;
+};
+
+SidebarToggler.prototype.addButton = function () {
+    if ($("#sidebar-toggle-button").length === 0) {
+        $("#header").prepend ("<a id='sidebar-toggle-button' class='sidebar-toggle-button' href='#'></a>")
+            .children ("#sidebar-toggle-button")
+                .attr ("title", this.getString ("buttonTitle"))
+                .click ((function (e) { 
+                    e.preventDefault();
+                    this.toggle ();
+                }).bind (this)); // TODO: Use polyfill for bind()?
+    }
 };
 
 SidebarToggler.prototype.toggle = function () {
