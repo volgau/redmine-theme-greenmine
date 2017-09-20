@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/volgau/redmine-theme-greenmine#readme",
   "devDependencies": {
+    "js-cookie": "^2.1.4",
     "webpack": "^3.6.0"
   }
 }

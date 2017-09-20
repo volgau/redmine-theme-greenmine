@@ -1,3 +1,5 @@
+require ("js-cookie");
+
 function SidebarToggler () {
 }
 
@@ -17,15 +19,13 @@ SidebarToggler.prototype.getString = function (slug) {
 
 SidebarToggler.prototype.addButton = function () {
     if ($("#sidebar").length > 0 && $("#sidebar-toggle-button").length === 0) {
-        // TODO: Add CSS class
         $("#header").prepend ("<a id='sidebar-toggle-button' class='sidebar-toggle-button' href='#'>&raquo;</a>");
         $("#header").children ("#sidebar-toggle-button")
             .attr ("title", this.getString ("buttonTitle"))
             .click ((function (e) { 
                 e.preventDefault();
                 this.toggle ();
-            // TODO: Use polyfill for bind()?
-            }).bind (this));
+            }).bind (this)); // TODO: Use polyfill for bind()?
     }
 };
 
@@ -51,6 +51,17 @@ SidebarToggler.prototype.show = function () {
     $("#sidebar").show ();
 };
 
-SidebarToggler.prototype.restoreButtonState = function () {
-    // TODO: Restore state from cookies
+SidebarToggler.prototype.getStoredState = function () {
+    return Cookies.get ("sidebar-state");
+};
+
+SidebarToggler.prototype.restoreState = function () {
+    var state = this.getStoredState ();
+    if (state === "undefined" || state === "open") {
+        this.show ();
+        Cookies.set ("sidebar-toggle-state", "open", {expires: 7});
+    } else {
+        this.hide ();
+        Cookies.set ("sidebar-toggle-state", "closed", {expires: 7});
+    }
 };

@@ -4,6 +4,6 @@ require ("./sidebarToggler.js");
     $(document).ready (function () {
         var sidebarToggler = new SidebarToggler ();
         sidebarToggler.addButton ();
-        sidebarToggler.restoreButtonState ();
+        sidebarToggler.restoreState ();
     });
 }) (jQuery, document);
