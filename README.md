@@ -6,7 +6,7 @@ See it in action at [projects.volgau.com](http://projects.volgau.com)!
 
 ## Install and update
 
-In order to run shell commands provided below, replace `<redmine>` with actual Redmine install location and <redmine_user> with actual account name under which your Redmine is running.
+In order to run shell commands provided below, replace `<redmine>` with actual Redmine install location and `<redmine_user>` with actual account name under which your Redmine is running.
 Provided shell commands should work for Debian and its derivatives.
 
 ### Install
@@ -29,7 +29,7 @@ Provided shell commands should work for Debian and its derivatives.
     ```Shell
     sudo -u <redmine_user> sh
     cd <redmine>/public/themes/greenmine
-    git pull
+    git pull --rebase
     ```
 
 2. Update page in your browser.
