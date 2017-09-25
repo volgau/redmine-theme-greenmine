@@ -57,6 +57,15 @@ tr.group span.count {
     background-color: #75CF9F;
 }
 
+.pagination ul.pages li.current {
+    background-color: #62B68D;
+    border-color: #62B68D;
+}
+
+.pagination ul.pages li.page a:hover, .pagination ul.pages li.page a:active {
+    color: #196;
+}
+
 /* Try to fix project card overflow to the next column */
 #projects-index ul.projects li.root {
     display: inline-block;
