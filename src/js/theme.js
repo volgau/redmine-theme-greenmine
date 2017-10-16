@@ -1,3 +1,7 @@
+var SCSS1 = require ("../scss/application_override.scss");
+var SCSS2 = require ("../scss/context_menu_override.scss");
+var SCSS3 = require ("../scss/responsive_override.scss");
+
 var SidebarToggler = require ("./sidebarToggler.js").SidebarToggler;
 
 (function ($, document) {
