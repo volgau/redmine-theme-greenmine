@@ -3,13 +3,40 @@ td.status span {
     padding: 0 4px;
 }
 
-tr.status-1 td.status span {
-    border: 1px solid #ccc;
-    background: #fff;
+@mixin issue_status ($bgcolor) {
+    border: 1px solid darken($bgcolor, 20%);
+    background: $bgcolor;
+    color: #fff;
 }
 
+// new
+tr.status-1 td.status span {
+    @include issue_status (#fff);
+    color: #000;
+}
+
+// in progress
 tr.status-2 td.status span {
-    border: 1px solid #090;
-    background: #0c0;
-    color: #fff;
+    @include issue_status (#0cf);
+}
+
+// resolved
+tr.status-3 td.status span {
+    @include issue_status (#00c);
+}
+
+// feedback
+tr.status-4 td.status span {
+    @include issue_status (#ff0);
+    color:#000;
+}
+
+// closed
+tr.status-5 td.status span {
+    @include issue_status (#0c0);
+}
+
+// rejected
+tr.status-6 td.status span {
+    @include issue_status (#c00);
 }
