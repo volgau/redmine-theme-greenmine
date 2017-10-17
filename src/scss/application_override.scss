@@ -1,5 +1,7 @@
+@import "colors";
+
 #top-menu {
-    background-color: #3E765B;
+    background-color: $color1;
     padding: 6px 2px 2px 10px;
 }
 
@@ -8,60 +10,60 @@
 }
 
 #header {
-    background-color: #62B68D;
+    background-color: $color6;
 }
 
 a, a:link, a:visited {
-    color: #196;
+    color: $color4;
 }
 
 #main-menu > ul > li > a:hover {
-    background-color: #75CF9F;
+    background-color: $color7;
 }
 
 #main-menu > ul > li > a.selected {
-    border-top: 3px solid #196;
+    border-top: 3px solid $color4;
 }
 
 #main-menu ul li a.new-object {
-    background-color: #196;
+    background-color: $color4;
     border-top: 3px solid #fff;
 }
 
 #main-menu .menu-children {
-    border-right-color: #75CF9F;
-    border-bottom-color: #75CF9F;
-    border-left-color: #75CF9F;
+    border-right-color: $color7;
+    border-bottom-color: $color7;
+    border-left-color: $color7;
 }
 
 #main-menu .menu-children li a:hover {
     color: #fff;
-    background-color: #75CF9F;
+    background-color: $color7;
 }
 
 input.autocomplete {
-    border-color: #9EC2B1 !important;
+    border-color: $color8 !important;
 }
 
 #sidebar a.selected {
-    background-color: #62B68D;
+    background-color: $color6;
 }
 
 tr.group span.count {
-    background: #62B68D;
+    background: $color6;
 }
 
 .drdn-items > a:hover {
-    background-color: #75CF9F;
+    background-color: $color7;
 }
 
 .pagination ul.pages li.current {
-    background-color: #62B68D;
-    border-color: #62B68D;
+    background-color: $color6;
+    border-color: $color6;
 }
 
 .pagination ul.pages li.page a:hover, .pagination ul.pages li.page a:active {
-    color: #196;
+    color: $color4;
 }
 
 /* Try to fix project card overflow to the next column */
@@ -81,7 +83,7 @@ tr.group span.count {
     background-color:#EEEEEE;
     border-top-width:3px;
     border-top-style:solid;
-    border-top-color:#119966;
+    border-top-color: $color4;
     border-bottom:none;
     border-right:none;
     font-weight: bold;
@@ -90,7 +92,7 @@ tr.group span.count {
 #header .sidebar-toggle-button.closed {
     color:#FFF;
     border-top-color:#FFF;
-    background-color:#119966;
+    background-color: $color4;
 }
 
 /* Issue grid styles by priority */
