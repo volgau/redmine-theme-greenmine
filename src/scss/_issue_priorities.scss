@@ -1,0 +1,23 @@
+tr.priority-highest td.priority,
+tr.priority-highest td.id a,
+tr.priority-highest td.id a:hover,
+tr.priority-highest td.subject a,
+tr.priority-highest td.subject a:hover { color: #F00; font-weight:bold; }
+
+tr.priority-high2 td.priority,
+tr.priority-high2 td.id a,
+tr.priority-high2 td.id a:hover, 
+tr.priority-high2 td.subject a,
+tr.priority-high2 td.subject a:hover { color: #F00; }
+
+tr.priority-high3 td.priority,
+tr.priority-high3 td.id a,
+tr.priority-high3 td.id a:hover, 
+tr.priority-high3 td.subject a,
+tr.priority-high3 td.subject a:hover { color: #FF5300; } 
+
+tr.priority-lowest td.priority,
+tr.priority-lowest td.id a,
+tr.priority-lowest td.id a:hover, 
+tr.priority-lowest td.subject a,
+tr.priority-lowest td.subject a:hover { color: #8093F1; }

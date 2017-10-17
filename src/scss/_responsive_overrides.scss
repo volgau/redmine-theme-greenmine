@@ -1,0 +1,17 @@
+@import "colors";
+
+@media screen and (max-width: 899px) {
+    #header {
+        background-color: $color6;
+    }
+
+    .flyout-menu {
+        background-color: $color1;
+    }
+    
+    .flyout-menu h3 {
+        border-top-color: $color2;
+        border-bottom-color: $color2;
+        background-color: $color6;
+    }
+}

@@ -1,0 +1,75 @@
+@import "colors";
+
+#top-menu {
+    background-color: $color1;
+    padding: 6px 2px 2px 10px;
+}
+
+#top-menu a {
+    margin-right: 12px;
+}
+
+#header {
+    background-color: $color6;
+}
+
+a, a:link, a:visited {
+    color: $color4;
+}
+
+#main-menu > ul > li > a:hover {
+    background-color: $color7;
+}
+
+#main-menu > ul > li > a.selected {
+    border-top: 3px solid $color4;
+}
+
+#main-menu ul li a.new-object {
+    background-color: $color4;
+    border-top: 3px solid #fff;
+}
+
+#main-menu .menu-children {
+    border-right-color: $color7;
+    border-bottom-color: $color7;
+    border-left-color: $color7;
+}
+
+#main-menu .menu-children li a:hover {
+    color: #fff;
+    background-color: $color7;
+}
+
+input.autocomplete {
+    border-color: $color8 !important;
+}
+
+#sidebar a.selected {
+    background-color: $color6;
+}
+
+tr.group span.count {
+    background: $color6;
+}
+
+.drdn-items > a:hover {
+    background-color: $color7;
+}
+
+.pagination ul.pages li.current {
+    background-color: $color6;
+    border-color: $color6;
+}
+
+.pagination ul.pages li.page a:hover, .pagination ul.pages li.page a:active {
+    color: $color4;
+}
+
+/* Try to fix project card overflow to the next column */
+#projects-index ul.projects li.root {
+    display: inline-block;
+}
+
+/* Expand subject column */
+tr.issue td.subject { width:100%; }

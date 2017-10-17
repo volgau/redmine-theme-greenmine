@@ -1,0 +1,18 @@
+@import "colors";
+
+#context-menu a:hover {
+    color: $color3;
+}
+
+#context-menu li:hover {
+    border: 1px solid $color6 !important;
+    background-color: $color9 !important;
+}
+
+.context-menu-selection {
+    background-color: $color5 !important;
+}
+
+.context-menu-selection:hover {
+    background-color: $color5 !important;
+}

@@ -1,18 +1,2 @@
 @import url("../../../stylesheets/context_menu.css");
-
-#context-menu a:hover {
-    color: #2A8556;
-}
-
-#context-menu li:hover {
-    border: 1px solid #62b68d !important;
-    background-color: #eefdf5 !important;
-}
-
-.context-menu-selection {
-    background-color: #50AA7A!important;
-}
-
-.context-menu-selection:hover {
-    background-color: #50AA7A !important;
-}
+@import url("./_context_menu.css");
