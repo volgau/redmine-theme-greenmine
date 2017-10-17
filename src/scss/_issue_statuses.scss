@@ -17,7 +17,7 @@ tr.status-1 td.status span {
 
 // in progress
 tr.status-2 td.status span {
-    @include issue_status (#0cf);
+    @include issue_status (#0c0);
 }
 
 // resolved
@@ -28,12 +28,13 @@ tr.status-3 td.status span {
 // feedback
 tr.status-4 td.status span {
     @include issue_status (#ff0);
-    color:#000;
+    color: #000;
 }
 
 // closed
 tr.status-5 td.status span {
-    @include issue_status (#0c0);
+    @include issue_status (#7c3);
+    color:#000;
 }
 
 // rejected
