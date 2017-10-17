@@ -1,0 +1,15 @@
+td.status span {
+    border-radius: 4px;
+    padding: 0 4px;
+}
+
+tr.status-1 td.status span {
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+tr.status-2 td.status span {
+    border: 1px solid #090;
+    background: #0c0;
+    color: #fff;
+}

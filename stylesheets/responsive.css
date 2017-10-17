@@ -1,2 +1,2 @@
 @import url("../../../stylesheets/responsive.css");
-@import url("./responsive_override.css");
+@import url("./_responsive.css");

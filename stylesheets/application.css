@@ -1,2 +1,2 @@
 @import url("../../../stylesheets/application.css");
-@import url("./application_override.css");
+@import url("./_application.css");

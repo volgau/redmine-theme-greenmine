@@ -11,9 +11,9 @@ var themeJsConfig = {
 
 var scssConfig = {
     entry: {
-        application_override: './src/scss/application_override.scss',
-        context_menu_override: './src/scss/context_menu_override.scss',
-        responsive_override: './src/scss/responsive_override.scss'
+        application: './src/scss/application.scss',
+        context_menu: './src/scss/context_menu.scss',
+        responsive: './src/scss/responsive.scss'
     },
     output: {
         // TODO: suppress JS output somehow?
@@ -29,7 +29,7 @@ var scssConfig = {
     },
     plugins: [
         new ExtractTextPlugin ({
-            filename: './stylesheets/[name].css',
+            filename: './stylesheets/_[name].css',
             allChunks: true
         })
     ]
