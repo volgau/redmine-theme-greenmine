@@ -7,6 +7,7 @@ var SidebarToggler = require ("./sidebarToggler.js").SidebarToggler;
     $(document).ready (function () {
         var sidebarToggler = new SidebarToggler ("greenmine_sidebar_state", 7);
         sidebarToggler.init ();
-        wrapCellInner ("td.status");
+        wrapCellInner ("table.issues td.status");
+        wrapCellInner ("div.issue div.attributes div.status div.value");
     });
 }) (jQuery, document);

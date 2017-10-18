@@ -1,6 +1,11 @@
-td.status span {
+table.issues td.status span,
+div.issue div.attributes div.status.attribute div.value span {
     border-radius: 4px;
     padding: 0 4px;
+}
+
+div.issue div.attributes div.status.attribute div.value span {
+    display: inline-block;
 }
 
 @mixin issue_status ($bgcolor) {
@@ -10,34 +15,40 @@ td.status span {
 }
 
 // new
-tr.status-1 td.status span {
+table.issues tr.status-1 td.status span,
+div.issue.status-1 div.attributes div.status.attribute div.value span {
     @include issue_status (#fff);
     color: #000;
 }
 
 // in progress
-tr.status-2 td.status span {
+table.issues tr.status-2 td.status span,
+div.issue.status-2 div.attributes div.status.attribute div.value span {
     @include issue_status (#0c0);
 }
 
 // resolved
-tr.status-3 td.status span {
+table.issues tr.status-3 td.status span,
+div.issue.status-3 div.attributes div.status.attribute div.value span {
     @include issue_status (#00c);
 }
 
 // feedback
-tr.status-4 td.status span {
+table.issues tr.status-4 td.status span,
+div.issue.status-4 div.attributes div.status.attribute div.value span {
     @include issue_status (#ff0);
     color: #000;
 }
 
 // closed
-tr.status-5 td.status span {
+table.issues tr.status-5 td.status span,
+div.issue.status-5 div.attributes div.status.attribute div.value span {
     @include issue_status (#7c3);
     color:#000;
 }
 
 // rejected
-tr.status-6 td.status span {
+table.issues tr.status-6 td.status span,
+div.issue.status-6 div.attributes div.status.attribute div.value span {
     @include issue_status (#c00);
 }
