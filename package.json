@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/volgau/redmine-theme-greenmine#readme",
   "devDependencies": {
+    "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^3.0.1",
     "js-cookie": "^2.1.4",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
     "webpack": "^3.6.0"
   },
   "scripts": {
