@@ -1,10 +1,34 @@
-$color1: #3E765B; // top menu background
-$color2: #50836A; // flyout menu items border
-$color3: #2A8556; // context menu hovered link
-$color4: #119966; // link
-$color5: #50AA7A; // context menu selection background
-$color6: #62B68D; // header background
-$color7: #75CF9F; // main/plus menu items hovered background
-$color8: #9EC2B1; // autocomplete input border
-$color9: #EEFDF5; // context menu items hovered background
-$color10: #70CDA7; // journal link
+$color1base: #3E5B76; // top menu background
+$color2base: #506A83; // flyout menu items border
+$color3base: #2A5685; // context menu hovered link
+$color4base: #116699; // link
+$color5base: #507AAA; // context menu selection background
+$color6base: #628DB6; // header background
+$color7base: #759FCF; // main/plus menu items hovered background
+$color8base: #9EB1C2; // autocomplete input border
+$color9base: #EEF5FD; // context menu items hovered background
+$color10base: #70A7CD; // journal link
+
+@function perceivedLuminance($color) {
+    @return (0.299 *red($color) + 0.587 * green($color) + 0.114 * blue($color));
+}
+
+@function correctLuminance($color, $baseColor) {
+    $factor: perceivedLuminance($baseColor) / perceivedLuminance($color);
+    @return rgb($factor * red($color), $factor * green($color), $factor * blue($color));
+}
+
+@function newColor($color) {
+    @return correctLuminance(rgb(red($color), blue($color), green($color)), $color); 
+}
+
+$color1: newColor($color1base);
+$color2: newColor($color2base);
+$color3: newColor($color3base);
+$color4: newColor($color4base);
+$color5: newColor($color5base);
+$color6: newColor($color6base);
+$color7: newColor($color7base);
+$color8: newColor($color8base);
+$color9: newColor($color9base);
+$color10: newColor($color10base);
