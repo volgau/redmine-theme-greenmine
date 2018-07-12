@@ -4,6 +4,13 @@
 
 See it in action at [projects.volgau.com](http://projects.volgau.com)!
 
+## Features
+
+- It's green and reuses as much CSS from default theme as possible.
+- Contains some bugfixes which default theme don't.
+- Converts some fields to select2 (if select2 plugin is installed) for better usability.
+- Integrated sidebar toggler.
+
 ## Install and update
 
 In order to run shell commands provided below, replace `<redmine>` with actual Redmine install location and `<redmine_user>` with actual account name under which your Redmine is running.
@@ -29,7 +36,7 @@ Provided shell commands should work for Debian and its derivatives.
     ```Shell
     sudo -u <redmine_user> sh
     cd <redmine>/public/themes/greenmine
-    git pull --rebase
+    git pull # or git pull --rebase
     ```
 
 2. Update page in your browser.
@@ -42,7 +49,7 @@ Provided shell commands should work for Debian and its derivatives.
 
 ## Compatibility
 
-Currently tested on Redmine 3.4.2 only.
+Tested on Redmine 3.4.2, 3.4.6.
 
 ## License
 
