@@ -7,9 +7,10 @@ See it in action at [projects.volgau.com](http://projects.volgau.com)!
 ## Features
 
 - It's green and reuses as much CSS from default theme as possible.
-- Contains some bugfixes which default theme don't.
-- Converts some fields to select2 (if select2 plugin is installed) for better usability.
-- Integrated sidebar toggler.
+- Contains some bugfixes over default theme.
+- Highlight issues with colors by priority and status.
+- Utilizes select2 (if select2 plugin is installed) for better usability.
+- Contains sidebar toggler.
 
 ## Install and update
 
