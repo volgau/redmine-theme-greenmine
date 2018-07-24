@@ -4,11 +4,12 @@ var SidebarToggler = require ("./sidebarToggler.js").SidebarToggler;
     function wrapCellInner (selector) {
         $(selector).wrapInner ("<span></span>");
     }
-    function applySelect2 () {
-        if (typeof (window.jql) === "function") {
-            window.jql ("select#issue_assigned_to_id").select2 ({dropdownAutoWidth: 'true', width: '60%'});
-            window.jql ("select#time_entry_activity_id").select2 ();
-            window.jql ("select[id^='issue_custom_field_values']").select2 ({dropdownAutoWidth: 'true', width: '60%'});
+    function applySelect2 ($) {
+        if (typeof ($) === "function") {
+            $("select#issue_assigned_to_id").select2 ({dropdownAutoWidth: 'true', width: '60%'});
+            $("#issue-form select#time_entry_activity_id").select2 ({dropdownAutoWidth: 'true', width: '60%'});
+            $("#new_time_entry select#time_entry_activity_id").select2 ();
+            $("select[id^='issue_custom_field_values']").select2 ({dropdownAutoWidth: 'true', width: '60%'});
         }
     }
     $(document).ready (function () {
@@ -16,6 +17,6 @@ var SidebarToggler = require ("./sidebarToggler.js").SidebarToggler;
         sidebarToggler.init ();
         wrapCellInner ("table.issues td.status");
         wrapCellInner ("div.issue div.attributes div.status div.value");
-        applySelect2 ();
+        applySelect2 (window.jql);
     });
 }) (jQuery, document);
