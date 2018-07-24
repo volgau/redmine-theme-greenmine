@@ -1,0 +1,9 @@
+/* Try to fix project card overflow to the next column */
+#projects-index ul.projects li.root {
+    display: inline-block;
+}
+
+/* Fix ugly wrapping in Assigned To column */
+table.list td.assigned_to {
+    white-space: nowrap;
+}
