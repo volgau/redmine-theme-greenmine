@@ -2,6 +2,7 @@
 @import "issue_priorities";
 @import "issue_statuses";
 @import "sidebar_toggler";
+@import "select2";
 
 // emphasize issue status dropdown
 form#issue-form.edit_issue select#issue_status_id {

@@ -1,0 +1,9 @@
+@import "colors";
+
+.theme-Greenmine .select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: $color7;
+}
+
+.theme-Greenmine .select2-container--default .select2-search--dropdown .select2-search__field {
+    border-color: $color8;
+}
