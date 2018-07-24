@@ -52,3 +52,16 @@ table.issues tr.status-6 td.status span,
 div.issue.status-6 div.attributes div.status.attribute div.value span {
     @include issue_status (#c00);
 }
+
+// investigating
+table.issues tr.status-7 td.status span,
+div.issue.status-7 div.attributes div.status.attribute div.value span {
+    @include issue_status (#cf7);
+    color:#000;
+}
+
+// confirmed
+table.issues tr.status-8 td.status span,
+div.issue.status-8 div.attributes div.status.attribute div.value span {
+    @include issue_status (#f7f);
+}
