@@ -3,7 +3,16 @@ var SidebarToggler = require ("./sidebarToggler.js").SidebarToggler;
 (function ($, document) {
     
     function wrapCellInner (selector) {
-        $(selector).wrapInner ("<span></span>");
+        $(selector).each (function () {
+            if ($(this).children ("span").length === 0) {
+                $(this).wrapInner ("<span></span>");
+            }
+        });
+    }
+
+    function applyStatusBadges () {
+        wrapCellInner ("table.issues td.status");
+        wrapCellInner ("div.issue div.attributes div.status div.value");
     }
 
     function applySelect2Partial ($) {
@@ -24,15 +33,14 @@ var SidebarToggler = require ("./sidebarToggler.js").SidebarToggler;
     $(document).ready (function () {
         var sidebarToggler = new SidebarToggler ("greenmine_sidebar_state", 7);
         sidebarToggler.init ();
-        wrapCellInner ("table.issues td.status");
-        wrapCellInner ("div.issue div.attributes div.status div.value");
-
+        applyStatusBadges ();
         if (isSelect2Installed ()) {
             applySelect2 (window.jql);
         }
     });
 
     $(document).on ("ajax:complete ajaxSuccess", function (event, data, status, xhr) {
+        applyStatusBadges ();
         if (isSelect2Installed ()) {
             applySelect2Partial (window.jql);
         }
