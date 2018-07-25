@@ -70,8 +70,3 @@ div.journal ul.details a,
 ul.revision-info a {
     color: $color10;
 }
-
-/* Try to fix project card overflow to the next column */
-#projects-index ul.projects li.root {
-    display: inline-block;
-}
