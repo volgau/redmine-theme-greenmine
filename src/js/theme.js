@@ -30,10 +30,34 @@ var SidebarToggler = require ("./sidebarToggler.js").SidebarToggler;
         return (typeof (window.jql) === "function" && window.jql ().select2);
     }
 
+    function applyConvertSpentTime () {
+        $(".issue.details .spent-time > .value > a").each (function () {
+            $(this).text (convertSpentTime ($(this).text ()));   
+        });
+        $(".time-entries .hours").each (function () {
+            $(this).text (convertSpentTime ($(this).text ()));
+        });
+    }
+      
+    function convertSpentTime (hourst) {
+        if (hourst.indexOf(":") < 0) {
+            var hoursd = parseFloat (hourst);
+            var hours = Math.floor (hoursd);
+            var minutes = Math.floor ((hoursd - hours) * 60);
+            var mt = "" + minutes;
+            if (mt.length === 1) {
+                mt = "0" + mt;
+            }
+            return hours + ":" + mt + " (" + hourst + ")";
+        }
+        return hourst;
+    }
+    
     $(document).ready (function () {
         var sidebarToggler = new SidebarToggler ("greenmine_sidebar_state", 7);
         sidebarToggler.init ();
         applyStatusBadges ();
+        applyConvertSpentTime ();
         if (isSelect2Installed ()) {
             applySelect2 (window.jql);
         }
