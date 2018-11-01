@@ -48,7 +48,7 @@ var SidebarToggler = require ("./sidebarToggler.js").SidebarToggler;
             if (mt.length === 1) {
                 mt = "0" + mt;
             }
-            return hours + ":" + mt + " (" + hourst + ")";
+            return hours + ":" + mt;
         }
         return hourst;
     }
