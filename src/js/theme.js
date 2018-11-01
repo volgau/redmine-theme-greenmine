@@ -43,7 +43,7 @@ var SidebarToggler = require ("./sidebarToggler.js").SidebarToggler;
         if (hourst.indexOf(":") < 0) {
             var hoursd = parseFloat (hourst);
             var hours = Math.floor (hoursd);
-            var minutes = Math.floor ((hoursd - hours) * 60);
+            var minutes = Math.ceil ((hoursd - hours) * 60);
             var mt = "" + minutes;
             if (mt.length === 1) {
                 mt = "0" + mt;
