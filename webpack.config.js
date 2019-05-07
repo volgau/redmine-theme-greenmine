@@ -1,21 +1,26 @@
-var ExtractTextPlugin = require ('extract-text-webpack-plugin');
+const path = require('path');
+const ExtractTextPlugin = require ('extract-text-webpack-plugin');
 
 var themeJsConfig = {
+    mode: "production",
     entry: {
         theme: './src/js/theme'
     },
     output: {
-        filename: 'javascripts/[name].js'
+        path: path.resolve (__dirname, 'javascripts'),
+        filename: '[name].js'
     }
 };
 
 var scssConfig = {
+    mode: "production",
     entry: {
         application: './src/scss/application.scss',
         context_menu: './src/scss/context_menu.scss',
         responsive: './src/scss/responsive.scss'
     },
     output: {
+        path: path.resolve (__dirname, 'stylesheets'),
         // TODO: suppress JS output somehow?
         filename: '.webpack/[name].js'
     },
@@ -29,7 +34,7 @@ var scssConfig = {
     },
     plugins: [
         new ExtractTextPlugin ({
-            filename: './stylesheets/_[name].css',
+            filename: '_[name].css',
             allChunks: true
         })
     ]
