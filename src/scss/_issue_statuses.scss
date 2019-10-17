@@ -45,8 +45,10 @@ div.issue.status-4 div.attributes div.status.attribute div.value span {
 // closed
 table.issues tr.status-5 td.status span,
 div.issue.status-5 div.attributes div.status.attribute div.value span {
-    @include issue_status (#ccc);
-    color:#000;
+    @include issue_status (#eee);
+    color: #999;
+    border-color: #999;
+    text-decoration: line-through;
 }
 
 // rejected (obsolete)
