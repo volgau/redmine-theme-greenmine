@@ -43,11 +43,11 @@ div.issue.status-4 div.attributes div.status.attribute div.value span {
 // closed
 table.issues tr.status-5 td.status span,
 div.issue.status-5 div.attributes div.status.attribute div.value span {
-    @include issue_status (#7c3);
+    @include issue_status (#ccc);
     color:#000;
 }
 
-// rejected
+// rejected (obsolete)
 table.issues tr.status-6 td.status span,
 div.issue.status-6 div.attributes div.status.attribute div.value span {
     @include issue_status (#c00);
@@ -63,5 +63,7 @@ div.issue.status-7 div.attributes div.status.attribute div.value span {
 // confirmed
 table.issues tr.status-8 td.status span,
 div.issue.status-8 div.attributes div.status.attribute div.value span {
-    @include issue_status (#f7f);
+    @include issue_status (#fcf);
+    border-color: #717;
+    color: #717;
 }
