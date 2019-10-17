@@ -7,3 +7,6 @@
 table.progress td.closed {
     border: 1px solid darken(#BAE0BA, 25%);
 }
+table.progress.progress-100 td.closed {
+    border-right-width: 3px;
+}
