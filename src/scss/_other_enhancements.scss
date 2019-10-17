@@ -2,3 +2,8 @@
 #sidebar ul.queries li {
     margin-bottom: 4px;
 }
+
+// add border around issue progress
+table.progress td.closed {
+    border: 1px solid #7a7;
+}
