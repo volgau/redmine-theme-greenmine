@@ -7,3 +7,9 @@
 table.list td.assigned_to {
     white-space: nowrap;
 }
+
+// GH-20 Remove buggy splitting content in columns
+.objects-selection > div, #user_group_ids {
+    column-count: 1;
+    column-width: auto;
+}
